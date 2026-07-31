@@ -1,18 +1,26 @@
 """
 Kalshi Quant Engine
-
-Main application entry point.
 """
 
-from datetime import datetime
+from core.logger import logger
+from core.config import settings
 
 
 def main():
-    print("=" * 50)
-    print("Kalshi Quant Engine")
-    print("Status: Initializing")
-    print(datetime.now())
-    print("=" * 50)
+
+    logger.info(
+        "Starting %s",
+        settings.app_name
+    )
+
+    logger.info(
+        "Trading mode: %s",
+        settings.mode
+    )
+
+    logger.info(
+        "System initialized"
+    )
 
 
 if __name__ == "__main__":
